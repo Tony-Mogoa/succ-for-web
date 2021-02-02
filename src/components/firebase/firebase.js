@@ -4,14 +4,14 @@ import "firebase/storage";
 import "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBhzljoCsf0dFsjUOcMtO-AX6jj1KY6MNk",
-    authDomain: "succ-3d591.firebaseapp.com",
-    databaseURL: "https://succ-3d591.firebaseio.com",
-    projectId: "succ-3d591",
-    storageBucket: "succ-3d591.appspot.com",
-    messagingSenderId: "654195978157",
-    appId: "1:654195978157:web:d4f8c01b9717a441defb24",
-    measurementId: "G-262SH4RNDZ",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
 };
 
 firebase.initializeApp(firebaseConfig);
@@ -20,5 +20,5 @@ export const storage = firebase.storage();
 export const auth = firebase.auth();
 export const provider = new firebase.auth.GoogleAuthProvider();
 export const signInWithGoogle = () => {
-    auth.signInWithPopup(provider);
+  auth.signInWithPopup(provider);
 };
