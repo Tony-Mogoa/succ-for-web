@@ -109,11 +109,10 @@ class Auth extends Component {
                 <div className="jumbotron">
                     <h1 className="display-4">SUCC</h1>
                     <p className="lead">
-                        A Catholic digital hymnal by Strathmore University
-                        Chaplaincy
+                        Strathmore University Chaplaincy Choir
                     </p>
                     <hr className="my-4" />
-                    <p>Fill out the fields to get started.</p>
+                    <p>A digital hymnal</p>
                 </div>
                 {this.renderCodeIncorrectMessage()}
                 <form onSubmit={this.handleFormSubmit}>
@@ -129,7 +128,7 @@ class Auth extends Component {
                         />
                     </div>
                     {this.renderAuthBox()}
-                    <div className="form-group form-check">
+                    {/* <div className="form-group form-check">
                         <input
                             type="checkbox"
                             name="noCode"
@@ -141,7 +140,7 @@ class Auth extends Component {
                         <label className="form-check-label" htmlFor="noCode">
                             I dont have any code
                         </label>
-                    </div>
+                    </div> */}
                     <button
                         type="submit"
                         className="btn btn-primary"
